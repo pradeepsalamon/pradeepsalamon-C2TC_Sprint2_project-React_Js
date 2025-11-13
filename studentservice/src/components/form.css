@@ -1,0 +1,99 @@
+.form-container {
+  margin: 10px auto;
+  width: 900px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-family: "Segoe UI", Arial, sans-serif;
+  transition: box-shadow 0.3s ease;
+}
+
+.form-container:hover {
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+h2 {
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* ---- Correct 3-column grid ---- */
+.form-grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px 20px;
+}
+
+
+
+/* Full-width fields */
+.full-width {
+  grid-column: span 3;
+}
+
+.input-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-column label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+.input-field {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.input-field:focus {
+  border-color: #185f2f;
+  box-shadow: 0 0 6px rgba(24, 95, 47, 0.3);
+  outline: none;
+}
+
+.button-group {
+  grid-column: span 2;   /* <-- now buttons take 2 columns */
+  display: flex;
+  justify-content: space-between;
+  margin-top: 18px;
+}
+
+
+.btn-submit,
+.btn-cancel {
+  border: none;
+  padding: 0px 25px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s ease, background-color 0.25s ease;
+}
+
+.btn-submit {
+  background-color: #185f2f;
+  color: white;
+}
+
+.btn-submit:hover {
+  background-color: #0e4020;
+  transform: scale(1.05);
+}
+
+.btn-cancel {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-cancel:hover {
+  background-color: #b32331;
+  transform: scale(1.05);
+}

@@ -1,0 +1,118 @@
+.student-list-container {
+  padding: 10px 10px;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.student-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: center;
+}
+
+.student-card {
+  border: 1px solid #d2d2d2;
+  border-radius: 10px;
+  padding: 18px;
+  width: 260px;
+  background: #ffffff;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.student-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.student-card h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.student-card p {
+  margin: 5px 0;
+  color: #555;
+  font-size: 14px;
+}
+
+.card-buttons {
+  margin-top: 14px;
+  display: flex;
+  gap: 10px;
+}
+
+.edit-btn,
+.delete-btn {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.edit-btn {
+  background-color: #d8d83d;
+}
+
+.edit-btn:hover {
+  background-color: #c1c12f;
+  transform: translateY(-2px);
+}
+
+.delete-btn {
+  background-color: #dc3545;
+}
+
+.delete-btn:hover {
+  background-color: #b32433;
+  transform: translateY(-2px);
+}
+
+.no-data {
+  color: gray;
+  font-style: italic;
+  font-size: 15px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+h3 {
+  margin-top: 0px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+
+.student-card:nth-child(5n+1) {
+  background: #e8f1ff;
+  border-color: #a8c7ff;
+}
+
+.student-card:nth-child(5n+2) {
+  background: #e9f7ed;
+  border-color: #a3d9a5;
+}
+
+.student-card:nth-child(5n+3) {
+  background: #fff9e6;
+  border-color: #f3d97a;
+}
+
+.student-card:nth-child(5n+4) {
+  background: #ffeaf0;
+  border-color: #f5a9c4;
+}
+
+.student-card:nth-child(5n+5) {
+  background: #f2e8ff;
+  border-color: #c8a8ff;
+}

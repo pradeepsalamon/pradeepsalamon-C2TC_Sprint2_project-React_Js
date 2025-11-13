@@ -1,25 +1,41 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
 import './App.css';
+import StudentForm from './components/StudentForm';
+import StudentList from './components/StudentList';
 
-function App() {
+const App = () => {
+  const [students, setStudents] = useState([]);
+  const [editingStudent, setEditingStudent] = useState(null);
+
+  useEffect(() => {
+    fetchStudents();
+  }, []);
+
+  const fetchStudents = async () => {
+    try {
+      const response = await fetch('http://localhost:8080/student');
+      const data = await response.json();
+      setStudents(data);
+    } catch (error) {
+      console.error('Error fetching students:', error);
+    }
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Student Management System</h1>
+      <StudentForm
+        fetchStudents={fetchStudents}
+        editingStudent={editingStudent}
+        setEditingStudent={setEditingStudent}
+      />
+      <StudentList
+        students={students}
+        fetchStudents={fetchStudents}
+        setEditingStudent={setEditingStudent}
+      />
     </div>
   );
-}
+};
 
 export default App;
